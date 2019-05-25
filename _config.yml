@@ -14,23 +14,23 @@ author: Fábio Madeira
 # jekyller.github.io - all contents run on /vitae/
 # for a normal use at the base of the server change it to "/"
 baseurl: /vitae/
-title: Chris Turner's Resume
-name: Chris Turner
-email: christurner@me.com
-email_full: mailto:youremail@me.com
-website: github.io/sustain
-website_full: https://jekyller.github.io/sustain
-github: trending
-twitter: twitter
-tel: +44 0000 000000
-tel_full: tel:+440000000000
+title: CV Rafael Tavares
+name: Rafael Tavares Andrade Toledo
+email: rafaeltavares@gmail.com
+email_full: mailto:rafaeltavares@gmail.com
+website: github.io/SitePessoal
+website_full: https://rafastavares.github.io/SitePessoal/
+github: rafastavares
+twitter: rafasmusic
+tel: +55 79996550610
+tel_full: tel:+5579996550610
 google_maps: 'https://www.google.co.uk/maps/place/44+Perth+St,+Edinburgh,+Edinburgh+City+EH3+5BL'
 address:
-  street: 44 Perth Street
-  postcode: EH3 5BL
-  city: Edinburgh
-  country: United Kingdom
-google_analytics: UA-69300817-1
+ # street: 44 Perth Street
+ # postcode: EH3 5BL
+  city: Aracaju - SE
+  country: Brasil
+google_analytics: 
 
 # needed for travis-ci build
 exclude: [vendor]

@@ -15,7 +15,8 @@ author: Rafael Tavares
 # for a normal use at the base of the server change it to "/"
 baseurl: /resume-cv/
 title: CV Rafael Tavares
-name: Rafael Toledo
+name: Rafael 
+lastName: Toledo
 middleName: Tavares Andrade
 email: rafaeltavares@gmail.com
 email_full: mailto:rafaeltavares@gmail.com

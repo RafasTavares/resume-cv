@@ -8,7 +8,7 @@ plugins: [jekyll-paginate]
 port: 4000
 safe: true
 url: https://rafastavares.github.io/resume-cv
-author: Fábio Madeira
+author: Rafael Tavares
 
 # edit this section with your information
 # jekyller.github.io - all contents run on /vitae/

@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>{{ site.title }}</title>
-    <meta name="description" content="{{ site.name }}'s Résumé">
+    <meta name="description" content="{{ site.name }}'s Resumo">
     <meta name="author" content="{{ site.name }} @{{ site.twitter }}">
 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -26,16 +26,14 @@
 <div class="container">
     <header class="three columns">
         <img src="{{ site.baseurl }}static/img/profile.jpg" class="me">
-        <h1> {{ site.name }} </h1>
-            <h3>{{ site.middleName }} </h3> 
-         <h1> {{ site.lastName }} </h1> 
+        <h1> {{ site.name }} </h1> 
         <p>
             <a href="{{ site.tel_full }}">{{ site.tel }}</a>
         </p>
         <address>
             <a href="{{ site.google_maps }}">
-                {{ site.address.street }}<br/>
-                {{ site.address.postcode }}<br/>
+               <!-- {{ site.address.street }}<br/>
+                {{ site.address.postcode }}<br/> -->
                 {{ site.address.city }}<br/>
                 {{ site.address.country }}
             </a>

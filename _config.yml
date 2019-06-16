@@ -7,13 +7,13 @@ paginate: 5
 plugins: [jekyll-paginate]
 port: 4000
 safe: true
-url: http://jekyller.github.io/vitae
-author: Fábio Madeira
+url: https://rafastavares.github.io/resume-cv
+author: Rafael Tavares
 
 # edit this section with your information
 # jekyller.github.io - all contents run on /vitae/
 # for a normal use at the base of the server change it to "/"
-baseurl: /vitae/
+baseurl: /resume-cv/
 title: CV Rafael Tavares
 name: Rafael Tavares Andrade Toledo
 email: rafaeltavares@gmail.com

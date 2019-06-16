@@ -26,6 +26,10 @@ a:hover, a:focus {
     color: #6C3483;
 }
 
+p {
+   text-align: justify;
+}
+
 p, address {
     margin-bottom: 0;
 }

@@ -1,0 +1,36 @@
+highlighter: rouge
+markdown: kramdown
+rdiscount:
+  extensions: [smart]
+permalink: :title.html
+paginate: 5
+plugins: [jekyll-paginate]
+port: 4000
+safe: true
+url: https://rafastavares.github.io/resume-cv
+author: Rafael Tavares
+
+# edit this section with your information
+# jekyller.github.io - all contents run on /vitae/
+# for a normal use at the base of the server change it to "/"
+baseurl: /resume-cv/
+title: CV Rafael Tavares
+name: Rafael Tavares Andrade Toledo
+email: rafaeltavaresandrade@gmail.com
+email_full: mailto:rafaeltavaresandrade@gmail.com
+website: github.io/SitePessoal
+website_full: https://rafastavares.github.io/SitePessoal/
+github: rafastavares
+twitter: rafasmusic
+tel: +55 (79) 99655-0610
+tel_full: tel:+55 (79) 99655-0610
+google_maps: ''
+address:
+ # street: 44 Perth Street
+ # postcode: EH3 5BL
+  city: Aracaju - SE
+  country: Brasil
+google_analytics: 
+
+# needed for travis-ci build
+exclude: [vendor]

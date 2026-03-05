@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt">
 <head>
     <meta charset="utf-8">
     <title>{{ site.title }}</title>
@@ -11,6 +11,25 @@
     <link rel="stylesheet" href="{{ site.baseurl }}static/css/base.css">
     <link rel="stylesheet" href="{{ site.baseurl }}static/css/skeleton.css">
     <link rel="stylesheet" href="{{ site.baseurl }}static/css/layout.css">
+    <style>
+        .lang-switch {
+            margin-top: 10px;
+            font-size: 12px;
+        }
+        .lang-switch button {
+            background: none;
+            border: 1px solid #ccc;
+            padding: 2px 6px;
+            margin-right: 4px;
+            cursor: pointer;
+            font-size: 12px;
+        }
+        .lang-switch button.is-active {
+            background: #333;
+            color: #fff;
+            border-color: #333;
+        }
+    </style>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
     <!--[if lt IE 9]>
@@ -26,7 +45,21 @@
 <div class="container">
     <header class="five columns">
         <img src="{{ site.baseurl }}static/img/profile.jpg" class="me">
-        <h1> {{ site.name }} </h1> 
+        <h1> {{ site.name }} </h1>
+        <div class="lang-switch">
+            <button type="button"
+                    data-lang-toggle="pt"
+                    data-i18n-key="lang.switch.pt"
+                    onclick="window.setSiteLanguage && window.setSiteLanguage('pt')">
+                PT
+            </button>
+            <button type="button"
+                    data-lang-toggle="en"
+                    data-i18n-key="lang.switch.en"
+                    onclick="window.setSiteLanguage && window.setSiteLanguage('en')">
+                EN
+            </button>
+        </div>
         <p>
             <a href="{{ site.tel_full }}"><i class="fa fa-mobile"></i> {{ site.tel }}</a>
         </p>
@@ -39,7 +72,10 @@
             </a>
         </address>
         <p>
-            <a href="{{ site.website_full }}"><i class="fa fa-globe"></i> Site Pessoal</a><br/>
+            <a href="{{ site.website_full }}">
+                <i class="fa fa-globe"></i>
+                <span data-i18n-key="layout.personal_site">Site Pessoal</span>
+            </a><br/>
         </p>
         <p>
             <a href="{{ site.email_full }}"><i class="fa fa-envelope-o"></i> {{ site.email }}</a><br/><br/>
@@ -55,8 +91,10 @@
         {{ content }}
 
     <footer class="eleven columns">
-        <p>© All rights reserved. Powered by <a href="http://jekyllrb.com/">Jekyll</a> and
-            <a href="https://www.github.com/jekyller/vitae">vitae</a> with ♥</p>
+        <p data-i18n-key="layout.footer">
+            © All rights reserved. Powered by <a href="http://jekyllrb.com/">Jekyll</a> and
+            <a href="https://www.github.com/jekyller/vitae">vitae</a> with ♥
+        </p>
     </footer>
     </div>
 </div>
@@ -65,6 +103,104 @@
          src="/assets/images/rafas.jpg"
          alt="Fork me on GitHub" data-canonical-src="#"></a>
 -->
+<script>
+  (function() {
+    var translations = {
+      pt: {
+        'lang.switch.pt': 'PT',
+        'lang.switch.en': 'EN',
+        'layout.personal_site': 'Site Pessoal',
+        'layout.footer': '© Todos os direitos reservados. Produzido com Jekyll e vitae com ♥',
+        'section.summary.title': 'Resumo',
+        'section.summary.body': 'Atualmente sou Desenvolvedor Back-end na Zup, trabalhando principalmente com desenvolvimento back-end do APP iti principalmente em .net core e Kotlin, desde a criação de pipelines até a observability dos microserviços. Grafana, kibana, AWS, .net core 5, Kotlin, noSQL são algumas das nossas principais stacks.\nGraduado em Sistemas para Internet pela UNIT (Universidade Tiradentes) e mestrando em Ciência da Computação na UFBA (Universidade Federal da Bahia), tenho como foco de pesquisa Análise e Visualização de Dados.\nPossuo conhecimentos em técnicas de Engenharia de Software e desenvolvimento ágil como modelagem de sistemas, especificação de requisitos,  modelos de gerenciamento de projetos, Scrum, Kaban, entre outras.\nDurante a graduação fui voluntário na Mozilla atuando com oficinas do Webmaker, organização de eventos e desenvolvimento para Firefox. Também fui MSP (Microsoft Student Partner) contribuindo principalmente com organização de eventos e ministrando cursos como o S2B (Students for Business).',
+        'section.experience.title': 'Experiência',
+        'section.education.title': 'Educação',
+        'section.skills.title': 'Skills',
+        'section.initiatives.title': 'Iniciativas e Projetos Voluntários',
+        'section.courses.title': 'Cursos e Eventos',
+        'section.hobbies.title': 'Hobbies'
+      },
+      en: {
+        'lang.switch.pt': 'PT',
+        'lang.switch.en': 'EN',
+        'layout.personal_site': 'Personal Website',
+        'layout.footer': '© All rights reserved. Powered by Jekyll and vitae with ♥',
+        'section.summary.title': 'Summary',
+        'section.summary.body': 'I am currently a Back-end Developer at Zup, working mainly on the back-end development of the iti app, primarily with .NET Core and Kotlin, from creating pipelines to observability of microservices. Grafana, Kibana, AWS, .NET Core 5, Kotlin and NoSQL are some of our main stacks.\nI hold a degree in Internet Systems from UNIT (Universidade Tiradentes) and I am a Master’s student in Computer Science at UFBA (Universidade Federal da Bahia), focusing my research on Data Analysis and Visualization.\nI have knowledge of Software Engineering techniques and agile development such as system modeling, requirements specification, project management models, Scrum, Kanban, among others.\nDuring my undergraduate studies I volunteered with Mozilla, running Webmaker workshops, organizing events and developing for Firefox. I was also an MSP (Microsoft Student Partner), mainly organizing events and teaching courses such as S2B (Students for Business).',
+        'section.experience.title': 'Experience',
+        'section.education.title': 'Education',
+        'section.skills.title': 'Skills',
+        'section.initiatives.title': 'Volunteer Initiatives and Projects',
+        'section.courses.title': 'Courses and Events',
+        'section.hobbies.title': 'Hobbies'
+      }
+    };
+
+    function applyLang(lang) {
+      if (!translations[lang]) {
+        lang = 'pt';
+      }
+
+      document.documentElement.setAttribute('lang', lang);
+      if (document.body) {
+        document.body.setAttribute('data-lang', lang);
+      }
+
+      var elements = document.querySelectorAll('[data-i18n-key]');
+      Array.prototype.forEach.call(elements, function (el) {
+        var key = el.getAttribute('data-i18n-key');
+        var mode = el.getAttribute('data-i18n-mode') || 'text';
+        var value = translations[lang] && translations[lang][key];
+        if (!value) {
+          return;
+        }
+        if (mode === 'html') {
+          el.innerHTML = value;
+        } else {
+          el.textContent = value;
+        }
+      });
+
+      var toggleButtons = document.querySelectorAll('[data-lang-toggle]');
+      Array.prototype.forEach.call(toggleButtons, function (btn) {
+        var btnLang = btn.getAttribute('data-lang-toggle');
+        if (btnLang === lang) {
+          btn.classList.add('is-active');
+        } else {
+          btn.classList.remove('is-active');
+        }
+      });
+
+      try {
+        window.localStorage.setItem('site-lang', lang);
+      } catch (e) {
+        // ignore
+      }
+    }
+
+    window.setSiteLanguage = function (lang) {
+      applyLang(lang);
+    };
+
+    var initialLang = 'pt';
+    try {
+      var stored = window.localStorage.getItem('site-lang');
+      if (stored && translations[stored]) {
+        initialLang = stored;
+      }
+    } catch (e) {
+      // ignore
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', function () {
+        applyLang(initialLang);
+      });
+    } else {
+      applyLang(initialLang);
+    }
+  })();
+</script>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

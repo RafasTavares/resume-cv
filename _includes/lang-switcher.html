@@ -1,0 +1,7 @@
+<nav class="lang-switcher" aria-label="Language">
+    {% if page.lang == 'pt-BR' %}
+    <a href="{{ site.baseurl }}" class="lang-switcher__btn" data-lang="en" title="Switch to English">EN</a>
+    {% else %}
+    <a href="{{ site.baseurl }}pt/" class="lang-switcher__btn" data-lang="pt-BR" title="Mudar para português">PT</a>
+    {% endif %}
+</nav>

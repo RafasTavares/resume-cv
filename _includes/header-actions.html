@@ -1,0 +1,11 @@
+<nav class="header-actions" aria-label="{% if page.lang == 'pt-BR' %}Ações do currículo{% else %}Resume actions{% endif %}">
+    <button type="button" class="header-actions__btn header-actions__btn--print" id="print-btn" title="{% if page.lang == 'pt-BR' %}Imprimir / Salvar como PDF{% else %}Print / Save as PDF{% endif %}">
+        <i class="fa fa-print" aria-hidden="true"></i>
+        <span class="header-actions__label">{% if page.lang == 'pt-BR' %}PDF{% else %}PDF{% endif %}</span>
+    </button>
+    {% if page.lang == 'pt-BR' %}
+    <a href="{{ site.baseurl }}" class="header-actions__btn" data-lang="en" title="Switch to English">EN</a>
+    {% else %}
+    <a href="{{ site.baseurl }}pt/" class="header-actions__btn" data-lang="pt-BR" title="Mudar para português">PT</a>
+    {% endif %}
+</nav>

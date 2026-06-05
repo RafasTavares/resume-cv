@@ -23,7 +23,7 @@
     }
 
     document.addEventListener('click', function (event) {
-        var link = event.target.closest('.lang-switcher__btn');
+        var link = event.target.closest('.header-actions__btn[data-lang]');
         if (!link) {
             return;
         }

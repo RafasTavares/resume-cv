@@ -136,12 +136,6 @@ em {
         display: none;
     }
 
-    .container {
-        margin: 0 auto;
-        width: 100%;
-        max-width: 960px;
-    }
-
     .container > header {
         font-size: 80%;
         line-height: 160%;

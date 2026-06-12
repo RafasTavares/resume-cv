@@ -136,10 +136,6 @@ em {
         display: none;
     }
 
-    .container > header {
-        font-size: 80%;
-        line-height: 160%;
-    }
 
     article > header > span {
         font-size: 80%;

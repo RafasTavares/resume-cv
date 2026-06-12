@@ -132,87 +132,13 @@ em {
         border: none;
     }
 
-    /* Oculta botões de impressão e idioma no header */
-    .header-actions,
-    .header-actions__btn--print,
-    .header-actions__btn[data-lang] {
-        display: none !important;
-        visibility: hidden !important;
+    .header-actions {
+        display: none;
     }
 
-    .container {
-        margin-top: 0;
-    }
-
-    /* Header pessoal: foto + nome à esquerda, contatos + badge ao lado */
-    .container > header.five.columns {
-        display: grid;
-        grid-template-columns: 100px 1fr 100px;
-        grid-template-rows: auto auto;
-        column-gap: 16px;
-        row-gap: 4px;
-        align-items: start;
-        width: 100% !important;
-        float: none !important;
-        margin: 0 0 16px 0 !important;
+    .container > header {
         font-size: 80%;
-        line-height: 150%;
-    }
-
-    .container > header .me {
-        grid-column: 1;
-        grid-row: 1;
-        margin-bottom: 0;
-        width: 100px;
-        height: 100px;
-    }
-
-    .container > header > h1 {
-        grid-column: 1;
-        grid-row: 2;
-        font-size: 140%;
-        margin-bottom: 0;
-        line-height: 120%;
-    }
-
-    .container > header > p:nth-of-type(1) {
-        grid-column: 2;
-        grid-row: 1;
-    }
-
-    .container > header > address {
-        grid-column: 2;
-        grid-row: 2;
-        margin-bottom: 0;
-    }
-
-    .container > header > p:nth-of-type(2) {
-        grid-column: 2;
-        grid-row: 3;
-    }
-
-    .container > header > p:nth-of-type(3) {
-        grid-column: 2;
-        grid-row: 4;
-    }
-
-    .container > header > p:last-of-type {
-        grid-column: 3;
-        grid-row: 1 / span 4;
-        margin-bottom: 0;
-        text-align: center;
-    }
-
-    .container > header > p,
-    .container > header > address {
-        margin-bottom: 4px;
-        text-align: left;
-    }
-
-    .container > .eleven.columns {
-        width: 100% !important;
-        float: none !important;
-        margin: 0 !important;
+        line-height: 160%;
     }
 
     article > header > span {

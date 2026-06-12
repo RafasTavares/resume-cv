@@ -43,11 +43,11 @@ p, address {
     margin-bottom: 20px;
 }
 
-header > h1, section > h1 {
+header h1, section > h1 {
     color: #6C3483;
 }
 
-header > h1 {
+.container > header h1 {
     line-height: 100%;
     font-size: 250%;
     margin-bottom: 20px;
@@ -133,12 +133,62 @@ em {
     }
 
     .header-actions {
-        display: none;
+        display: none !important;
+    }
+
+    .header-contact__website,
+    .header-contact__social,
+    .header-contact__badge {
+        display: none !important;
+    }
+
+    .container {
+        width: 100%;
+        margin-top: 0;
     }
 
     .container > header {
         font-size: 80%;
         line-height: 160%;
+        float: none !important;
+        width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        display: flex !important;
+        align-items: flex-start;
+        gap: 10mm;
+        margin-bottom: 10mm;
+    }
+
+    .container > header .header-identity {
+        flex: 0 0 35%;
+        text-align: center;
+    }
+
+    .container > header .header-identity h1 {
+        margin-bottom: 0;
+        font-size: 170%;
+    }
+
+    .container > header .header-identity .me {
+        margin-bottom: 10px;
+    }
+
+    .container > header .header-contact {
+        flex: 1;
+    }
+
+    .container > header .header-contact p,
+    .container > header .header-contact address {
+        margin-bottom: 8px;
+        text-align: left;
+    }
+
+    .container > .eleven.columns {
+        float: none !important;
+        width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
     }
 
     article > header > span {

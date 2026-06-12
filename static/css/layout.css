@@ -132,10 +132,13 @@ em {
         border: none;
     }
 
-    .header-actions {
-        display: none;
+    /* Oculta botões de impressão e idioma no header */
+    .header-actions,
+    .header-actions__btn--print,
+    .header-actions__btn[data-lang] {
+        display: none !important;
+        visibility: hidden !important;
     }
-
 
     article > header > span {
         font-size: 80%;

@@ -136,6 +136,12 @@ em {
         display: none !important;
     }
 
+    .header-contact__website,
+    .header-contact__social,
+    .header-contact__badge {
+        display: none !important;
+    }
+
     .container {
         width: 100%;
         margin-top: 0;

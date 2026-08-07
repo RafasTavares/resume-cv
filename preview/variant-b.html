@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Print preview — Variant B (compact banner)</title>
+    <link rel="stylesheet" href="../static/css/base.css">
+    <link rel="stylesheet" href="../static/css/skeleton.css">
+    <link rel="stylesheet" href="../static/css/layout.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <style>
+        /* Variant B: faixa horizontal compacta — mais conteúdo por página */
+        body {
+            font-size: 11pt;
+            line-height: 16pt;
+            border: none;
+            margin: 0;
+            padding: 10mm;
+            max-width: 210mm;
+            box-sizing: border-box;
+            color: #222;
+        }
+        .header-actions { display: none !important; }
+        .header-contact__website,
+        .header-contact__social,
+        .header-contact__badge { display: none !important; }
+        .container { width: 100%; margin-top: 0; }
+        .container > header {
+            float: none !important;
+            width: 100% !important;
+            margin: 0 0 6mm 0 !important;
+            padding-bottom: 4mm;
+            border-bottom: 1.5pt solid #6C3483;
+            display: flex !important;
+            flex-direction: row;
+            align-items: center;
+            gap: 5mm;
+        }
+        .container > header .header-identity {
+            flex: 0 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 4mm;
+            text-align: left;
+        }
+        .container > header .header-identity .me {
+            width: 56px;
+            height: 56px;
+            margin-bottom: 0;
+            flex-shrink: 0;
+        }
+        .container > header .header-identity h1 {
+            font-size: 16pt;
+            margin-bottom: 0;
+            line-height: 1.1;
+            white-space: nowrap;
+        }
+        .container > header .header-contact {
+            flex: 1;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2mm 6mm;
+            align-items: center;
+            font-size: 9pt;
+            line-height: 1.3;
+        }
+        .container > header .header-contact p,
+        .container > header .header-contact address {
+            margin-bottom: 0;
+            text-align: left;
+        }
+        .container > header .header-contact p { display: inline; }
+        .container > header .header-contact address { display: inline; }
+        .container > .eleven.columns {
+            float: none !important;
+            width: 100% !important;
+            margin: 0 !important;
+        }
+        section { margin-bottom: 12px; }
+        section > h1 { font-size: 11pt; margin-bottom: 4px; }
+        article { margin-bottom: 10px; }
+        article > header > h1 { font-size: 10.5pt; }
+        article > header > span { font-size: 8.5pt; }
+        p { text-align: left; }
+        footer { display: none; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <header class="five columns">
+        <div class="header-identity">
+            <img src="../static/img/profile.jpg" class="me" alt="">
+            <h1>Rafael Tavares Andrade Toledo</h1>
+        </div>
+        <div class="header-contact">
+            <p><a href="#"><i class="fa fa-mobile"></i> +55 (79) 99655-0610</a></p>
+            <address><i class="fa fa-home"></i> Aracaju - SE / Brasil</address>
+            <p class="header-contact__website"><a href="#"><i class="fa fa-globe"></i> Website</a></p>
+            <p><a href="#"><i class="fa fa-envelope-o"></i> rafaeltavaresandrade@gmail.com</a><span class="header-contact__social"></span></p>
+            <p class="header-contact__badge"></p>
+        </div>
+    </header>
+    <div class="eleven columns clearfix">
+        <section><h1>Summary</h1><p>Back-end Tech Lead at Zup (Itaú). Leading migration of legacy COBOL/.NET projects with generative AI, Python, Java on AWS. Full Stack since 2012. Master's in CS at UFBA.</p></section>
+        <section><h1>Experience</h1>
+            <article><header><h1>AI Tech Lead</h1><span><address>Aracaju, SE</address><time> Oct 2020 - Present</time></span></header><p>Tech Lead of a squad with eight developers, migrating legacy COBOL and .NET applications to Python and AI-based tools.</p></article>
+            <article><header><h1>IT Coordinator - Serveloja</h1><span><address>Aracaju, SE</address><time> Apr 2020 - Oct 2020</time></span></header><p>Technical leader and Scrum Master. C#, Angular, React, SQL Server, Azure.</p></article>
+        </section>
+        <section><h1>Education</h1>
+            <article><header><h1>Master's in Computer Science</h1><span>Federal University of Bahia</span><span><address>Salvador, BA</address><time>2017 - Present</time></span></header></article>
+        </section>
+        <section><h1>Skills</h1>
+            <article><header><h1>Software Engineering</h1></header><p><em>C#, .NET Core, Kotlin, Python, AWS, Docker, Angular, Git, Scrum.</em></p></article>
+        </section>
+    </div>
+</div>
+</body>
+</html>

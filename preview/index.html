@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <title>Prévia de impressão — CV Rafael Tavares</title>
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            margin: 0;
+            padding: 24px;
+            background: #eef0f3;
+            color: #1a1a1a;
+        }
+        h1 { margin: 0 0 8px; font-size: 1.5rem; }
+        .intro {
+            max-width: 960px;
+            margin-bottom: 24px;
+            line-height: 1.5;
+        }
+        .intro code {
+            background: #fff;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 20px;
+            align-items: start;
+        }
+        .card {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 12px rgba(0,0,0,.08);
+            overflow: hidden;
+        }
+        .card__head {
+            padding: 14px 16px;
+            border-bottom: 1px solid #e8e8e8;
+        }
+        .card__head h2 {
+            margin: 0 0 4px;
+            font-size: 1rem;
+            color: #6C3483;
+        }
+        .card__head p {
+            margin: 0;
+            font-size: 0.85rem;
+            color: #555;
+            line-height: 1.4;
+        }
+        .card__frame {
+            width: 100%;
+            height: 520px;
+            border: none;
+            display: block;
+            background: #fff;
+        }
+        .card__actions {
+            padding: 10px 16px 14px;
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+        .card__actions a {
+            font-size: 0.82rem;
+            color: #6C3483;
+            text-decoration: none;
+            padding: 6px 10px;
+            border: 1px solid #6C3483;
+            border-radius: 4px;
+        }
+        .card__actions a:hover { background: #6C3483; color: #fff; }
+        .note {
+            margin-top: 24px;
+            padding: 14px 16px;
+            background: #fff8e6;
+            border-left: 4px solid #e6b800;
+            max-width: 960px;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <h1>Prévia de impressão do currículo</h1>
+    <div class="intro">
+        <p>Compare as três opções abaixo antes de commitar. Cada iframe simula o layout de impressão/PDF.
+        Abra a variante em nova aba e use <strong>Cmd+P → Salvar como PDF</strong> para testar o resultado final.</p>
+        <p>Pasta: <code>preview/</code> — arquivos temporários, não entram no site publicado.</p>
+    </div>
+
+    <div class="grid">
+        <div class="card">
+            <div class="card__head">
+                <h2>A — Atual</h2>
+                <p>Foto e nome à esquerda (35%), contatos à direita. Conteúdo em largura total abaixo. Esconde site, redes e badge.</p>
+            </div>
+            <iframe class="card__frame" src="variant-a.html" title="Variant A"></iframe>
+            <div class="card__actions">
+                <a href="variant-a.html" target="_blank">Abrir em nova aba</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card__head">
+                <h2>B — Faixa compacta</h2>
+                <p>Header horizontal com foto pequena + nome + contatos inline. Fonte menor, mais conteúdo por página. Ideal para CV de 1–2 páginas.</p>
+            </div>
+            <iframe class="card__frame" src="variant-b.html" title="Variant B"></iframe>
+            <div class="card__actions">
+                <a href="variant-b.html" target="_blank">Abrir em nova aba</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card__head">
+                <h2>C — Duas colunas</h2>
+                <p>Mantém sidebar (dados pessoais à esquerda, experiência à direita), parecido com a visualização na tela.</p>
+            </div>
+            <iframe class="card__frame" src="variant-c.html" title="Variant C"></iframe>
+            <div class="card__actions">
+                <a href="variant-c.html" target="_blank">Abrir em nova aba</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="note">
+        <strong>Próximo passo:</strong> escolha A, B ou C (ou combine ideias) e eu aplico no <code>layout.css</code> real.
+        Nada será commitado até você confirmar.
+    </div>
+</body>
+</html>

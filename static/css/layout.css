@@ -143,6 +143,10 @@ em {
         display: none !important;
     }
 
+    .interests-section {
+        display: none !important;
+    }
+
     .container {
         width: 100%;
         margin-top: 0;

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Print preview — Variant C (two-column sidebar)</title>
+    <link rel="stylesheet" href="../static/css/base.css">
+    <link rel="stylesheet" href="../static/css/skeleton.css">
+    <link rel="stylesheet" href="../static/css/layout.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <style>
+        /* Variant C: mantém colunas laterais como na tela */
+        body {
+            font-size: 12pt;
+            line-height: 18pt;
+            border: none;
+            margin: 0;
+            padding: 12mm;
+            max-width: 210mm;
+            box-sizing: border-box;
+        }
+        .header-actions { display: none !important; }
+        .header-contact__website,
+        .header-contact__social,
+        .header-contact__badge { display: none !important; }
+        .container {
+            width: 100%;
+            margin-top: 0;
+            overflow: hidden;
+        }
+        .container > header.five.columns {
+            float: left !important;
+            width: 32% !important;
+            margin: 0 3% 0 0 !important;
+            display: block !important;
+            font-size: 78%;
+            line-height: 150%;
+        }
+        .container > header .header-identity {
+            text-align: center;
+            margin-bottom: 4mm;
+        }
+        .container > header .header-identity .me {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 8px;
+        }
+        .container > header .header-identity h1 {
+            font-size: 130%;
+            margin-bottom: 8px;
+            line-height: 1.15;
+        }
+        .container > header .header-contact p,
+        .container > header .header-contact address {
+            margin-bottom: 6px;
+            text-align: left;
+        }
+        .container > .eleven.columns {
+            float: left !important;
+            width: 65% !important;
+            margin: 0 !important;
+        }
+        section { margin-bottom: 14px; }
+        section > h1 { font-size: 12pt; }
+        article { margin-bottom: 12px; }
+        article > header > span { font-size: 78%; line-height: 78%; }
+        footer { display: none; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <header class="five columns">
+        <div class="header-identity">
+            <img src="../static/img/profile.jpg" class="me" alt="">
+            <h1>Rafael Tavares Andrade Toledo</h1>
+        </div>
+        <div class="header-contact">
+            <p><a href="#"><i class="fa fa-mobile"></i> +55 (79) 99655-0610</a></p>
+            <address><i class="fa fa-home"></i> <a href="#">Aracaju - SE / Brasil</a></address>
+            <p class="header-contact__website"><a href="#"><i class="fa fa-globe"></i> Personal Website</a></p>
+            <p><a href="#"><i class="fa fa-envelope-o"></i> rafaeltavaresandrade@gmail.com</a><span class="header-contact__social"><br><br>
+            <a href="#"><i class="fa fa-github"></i> Github</a> / <a href="#"><i class="fa fa-twitter"></i> Twitter</a></span></p>
+            <p class="header-contact__badge"><img src="../static/img/MTA-Software-Development-Fundamentals-2019.png" style="width:100px;height:100px;" alt=""></p>
+        </div>
+    </header>
+    <div class="eleven columns clearfix">
+        <section><h1>Summary</h1><p>Back-end Tech Lead at Zup (Itaú). Leading migration of legacy COBOL/.NET projects with generative AI, Python, Java on AWS. Full Stack since 2012. Master's in CS at UFBA.</p></section>
+        <section><h1>Experience</h1>
+            <article><header><h1>AI Tech Lead</h1><span><address>Aracaju, SE</address><time> Oct 2020 - Present</time></span></header><p>Tech Lead of a squad with eight developers, migrating legacy COBOL and .NET applications to Python and AI-based tools.</p></article>
+            <article><header><h1>IT Coordinator - Serveloja</h1><span><address>Aracaju, SE</address><time> Apr 2020 - Oct 2020</time></span></header><p>Technical leader and Scrum Master. C#, Angular, React, SQL Server, Azure.</p></article>
+        </section>
+        <section><h1>Education</h1>
+            <article><header><h1>Master's in Computer Science</h1><span>Federal University of Bahia</span><span><address>Salvador, BA</address><time>2017 - Present</time></span></header></article>
+        </section>
+        <section><h1>Skills</h1>
+            <article><header><h1>Software Engineering</h1></header><p><em>C#, .NET Core, Kotlin, Python, AWS, Docker, Angular, Git, Scrum.</em></p></article>
+        </section>
+    </div>
+</div>
+</body>
+</html>

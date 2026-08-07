@@ -1,0 +1,14 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "rafaeltavares-techlead",
+      "runtimeExecutable": "/bin/bash",
+      "runtimeArgs": [
+        "-c",
+        "export PATH=/Users/rafasmusic/.nvm/versions/node/v22.23.1/bin:$PATH && cd /Users/rafasmusic/Documents/GitHub/rafaeltavares-techlead && exec npm run dev"
+      ],
+      "port": 4321
+    }
+  ]
+}

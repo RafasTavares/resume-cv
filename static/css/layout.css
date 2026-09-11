@@ -114,6 +114,12 @@ article > header address + time::before {
     margin-right: 6px;
 }
 
+.header-contact__badge {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+}
+
 em {
     font-style: normal;
     font-weight: bold;

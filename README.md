@@ -1,4 +1,4 @@
-# Rafael Tavares Andrade Toledo
+# Rafael Toledo
 
 Currículo profissional hospedado em [rafastavares.github.io/resume-cv](https://rafastavares.github.io/resume-cv).
 
